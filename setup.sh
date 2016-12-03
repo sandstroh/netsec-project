@@ -23,6 +23,7 @@ cp -r www/fonts/ $WEBSITE_DIRECTORY/fonts
 cp -r www/images/ $WEBSITE_DIRECTORY/images
 cp -r www/js $WEBSITE_DIRECTORY/js
 cp www/netsec.html $WEBSITE_DIRECTORY/netsec.html
+chown -R www-data:www-data /var/www
 
 cp www/index.cgi /usr/lib/cgi-bin/index.cgi
 chmod +x /usr/lib/cgi-bin/index.cgi
