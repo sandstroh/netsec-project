@@ -6,3 +6,9 @@ then
     echo "Please run as root"
     exit
 fi
+
+
+cp nginx/static.page /etc/nginx/site-enabled/
+nginx -s reload
+
+cp www/ var/www/static/
