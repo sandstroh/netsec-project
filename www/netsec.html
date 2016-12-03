@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- TODO: fix the following problem: -->
+  <!-- Note: We don't use the default include header as it also contains the HTML head tags and not specific enough meta tags. -->
+  <!-- php include '../../../includes/head.html'; -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NetSec 2016: Network Security Autumn 2016 Lecture at ETH Zurich">
+    <meta name="keywords" content="network security, lecture, ETH">
+    <meta name="author" content="Network Security Group">
+
+    <title>NetSec 2016: Network Security Autumn 2016 Lecture at ETH Zurich</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/animate.min.css" rel="stylesheet">
+    <link href="/css/prettyPhoto.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/responsive.css" rel="stylesheet">
+    <link href="/css/tablesaw.stackonly.css" rel="stylesheet">
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.prettyPhoto.js"></script>
+    <script src="/js/jquery.isotope.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/wow.min.js"></script>
+    <script src="/js/tablesaw.stackonly.js"></script>
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="icon" type="image/png" sizes="144x144" href="/images/ico/favicon-144x144.png">
+    <link rel="icon" type="image/png" sizes="114x114" href="/images/ico/favicon-114x114.png">
+    <link rel="icon" type="image/png" sizes="72x72" href="/images/ico/favicon-72x72.png">
+    <link rel="icon" type="image/png" sizes="57x57" href="/images/ico/favicon-57x57.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/ico/favicon-32x32.png">
+  </head>
+
+  <body>
+      <header id="header">
+	<nav class="navbar navbar-inverse" role="navigation" style="background-color: #003366">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="https://www.ethz.ch/">
+					<img id="eth-logo" src="/images/eth_logo.png" alt="logo">
+				</a><br>
+				<a class="navbar-brand" href="/">
+					<h2 class="group-title">Network Security Group</h2>
+				</a>
+			</div>
+			<div class="collapse navbar-collapse navbar-right">
+				<ul class="nav navbar-nav">
+					<li><a href="/">Home</a></li>
+					<li><a href="/people">People</a></li>
+					<li><a href="/research/">Research</a></li>
+					<li><a href="/publications/">Publications</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Education <i class="fa fa-angle-down"></i></a>
+						<ul class="dropdown-menu">
+							<li><a href="/education/projects/">Project Offerings</a></li>
+							<li><a href="/education/courses/">Courses</a></li>
+						</ul>
+					</li>
+					<li><a href="/contact/">Contact</a></li>                        
+				</ul>
+			</div>
+		</div><!--/.container-->
+	</nav><!--/nav-->
+</header>
+
+      <section class="transparent-bg container">
+          <h1>Network Security, Autumn 2016</h1>
+
+          <h5>Basic Course Information</h5>
+
+                <table class="tablesaw tablesaw-stack" data-tablesaw-mode="stack">
+                        <tr>
+                            <td class="title"><b>Course Code</b></td>
+                            <td>263-4640-00L</td>
+                        </tr>
+                        <tr>
+                            <td class="title"><b>Language</b></td>
+                            <td>English</td>
+                        </tr>
+                        <tr>
+                            <td class="title"><b>Instructors</b></td>
+                            <td>
+                                Prof. Dr. Adrian Perrig [AP]<br>
+                    <a href="http://thomas.duebendorfer.ch/">Dr. Thomas D&uuml;bendorfer [TD]</a> (<a href="mailto:thomas@duebendorfer.ch">Email</a>)<br>
+                    Dr. Stefan Frei [SF]
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title"><b>Teaching Assistants</b></td>
+                            <td>
+                                Daniele Asoni [DA]<br />
+                                Chen Chen [CC]<br />
+                                Ercan Ucan [EU]<br />
+                                Raphael Reischuk [RR]<br />
+                                Sam Hitz [SH]<br />
+                                Tae-Ho Lee [TL]
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title"><b>Lectures</b></td>
+                            <td>Tuesday 10:15-11:55, <a href="http://www.rauminfo.ethz.ch/Rauminfo/grundrissplan.gif?gebaeude=CAB&geschoss=G&raumNr=61">CAB G 61</a></td>
+                        </tr>
+                        <tr>
+                            <td class="title"><b>Guest Talks and Exercise Sessions</b></td>
+                            <td>Tuesday 9:15-10:00, <a href="http://www.rauminfo.ethz.ch/Rauminfo/grundrissplan.gif?gebaeude=CAB&geschoss=G&raumNr=61">CAB G 61</a></td>
+                        </tr>
+                        <tr>
+                            <td class="title"><b>Lab</b></td>
+                            <td>Use your laptop and log into <a href="https://www.hacking-lab.com/">https://www.hacking-lab.com/</a>.<br>
+                                Solve the challenges of our NetSec event online at any time you want.<br>
+                                Teams of (up to) five students will create one new challenge per team.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title"><b>Office Hours</b></td>
+                            <td><b>By appointment only.</b> Preferred hours: Monday 13:30-15:00, CAB F 86.2.</td>
+                        </tr>
+                        <tr>
+                            <td class="title"><b>Grading</b></td>
+                            <td>You must pass the exam to get credit points</td>
+                        </tr>
+                        <tr>
+                            <td class="title"><b>Course Catalogue Entry</b></td>
+                            <td><a href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheitPre.do?semkez=2016W&lerneinheitId=109321&lang=en">263-4640-00L Network Security</a></td>
+                        </tr>
+                        <tr>
+                            <td class="title"><b>Course Slides/Readers (SVN)</b></td>
+                            <td>Use your n.ethz account to access the slides and readers in the SVN:<br><a href="https://svn.inf.ethz.ch/svn/perrig/netsec/teaching/netsec-2016/students/">https://svn.inf.ethz.ch/svn/perrig/netsec/teaching/netsec-2016/students/</a></td>
+                        </tr>
+                </table>
+
+          <h5>Course News</h5>
+
+                <table class="tablesaw tablesaw-stack" data-tablesaw-mode="stack">
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="title"><b>10.10.2016</b></td>
+                            <td>
+                                Office hours will be held only by appointment. Please send us an email and let us know in advance what topic you would like to discuss (e.g., a specific problem with a Hacking Lab challenge).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title"><b>30.09.2016</b></td>
+                            <td>Students who have submitted the legal declaration have now access to the following:<br />
+                                the <a href="https://svn.inf.ethz.ch/svn/perrig/netsec/teaching/netsec-2016/students/">student SVN;</a>
+                                the <a href="http://www.video.ethz.ch/lectures/d-itet/2016/autumn/263-4640-00L.html">video recordings</a> of the lecture;
+                                the <a href="https://www.hacking-lab.com/events/">Hacking Lab</a> course event.<br />
+                                The access credentials have been sent out via email.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title"><b>07.09.2016</b></td>
+                            <td>Students <b>must</b> sign and submit the legal use declaration for this course <b>no later than 27.9.2016</b> (it can be handed in before the lecture).<br>
+                                  German: <a href="files/merkblatt_vorlesung_final_de.pdf">PDF</a> <a href="files/merkblatt_vorlesung_final_de.docx">Word</a><br>
+                                  English: <a href="files/merkblatt_vorlesung_final_en.pdf">PDF</a> <a href="files/merkblatt_vorlesung_final_en.docx">Word</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+          <h5>Schedule</h5>
+
+                <table class="tablesaw tablesaw-stack" data-tablesaw-mode="stack">
+                    <thead>
+                        <tr>
+                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist">Date</th>
+                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col data-tablesaw-priority="3">Guest or Exercise</th>
+                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2">Lecture</th>
+                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1">Lab</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="title">Week 1, 20.09.2016</td>
+                            <td>Computer Networks Refresher [AP]</td>
+                            <td>Introduction, Insecurity, and Risk [SF]<br />
+                                Vulnerability Lifecycle [SF]
+                            </td>
+                            <td>Starts on the second week</td>
+                        </tr>
+                        <tr>
+                            <td class="title">Week 2, 27.09.2016</td>
+                            <td>E1: Insecurity and Basics [DA]<br />
+                                Hacking Lab Introduction [DA]<!--<a href="files/hacking-lab.pdf">Hacking Lab</a>-->
+                            </td>
+                            <td>Identity and Authentication [TD]</td>
+                            <td>Get Hacking-Lab account, join event and set up access</td>
+                        </tr>
+                        <tr>
+                            <td class="title">Week 3, 04.10.2016</td>
+                            <td>Candid W&uuml;est, Principal Threat Researcher, Symantec: "Malware Analysis and Prevention"</td>
+                            <td>Firewalls, IDS, and NAT traversal [AP]</td>
+                            <td>Do one step-by-step example</td>
+                        </tr>
+                        <tr>
+                            <td class="title">Week 4, 11.10.2016</td>
+                            <td>Raphael M. Reischuk, Network Security Group: "An Internet Architecture for the 21st Century"</td>
+                            <td>DNS Security [SF]</td>
+                            <td>TBA</td>
+                        </tr>
+                        <tr>
+                            <td class="title">Week 5, 18.10.2016</td>
+                            <td>Vincent Lenders, Armasuisse: "Next-generation Air Traffic Control: Overview and Security Issues"</td>
+                            <td>
+                                Secure Channels: Principles, VPN, SSH [TD]<br />
+                                Availability and DoS [TD]
+                            </td>
+                            <td>TBA</td>
+                        </tr>
+                        <tr>
+                            <td class="title">Week 6, 25.10.2016</td>
+                            <td>E2: DoS and Project Demo [SH]</td>
+                            <td>Session State; SQL Injection [SF]</td>
+                            <td>
+                                <s>4002: VPN Aggressive Mode Hacking</s><br />
+                                7010: DNS Host Name Change
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title">Week 7, 01.11.2016</td>
+                            <td>Silvio Oertli, SWITCH: "Switch CERT"</td>
+                            <td>Malware Development and Demo; Botnets [SF]</td>
+                            <td>
+                                2202 Session Fixation Attack<br />
+                                2312 Blind SQL Injection
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title">Week 8, 08.11.2016</td>
+                            <td>E3: DNS and DNSSEC</td>
+                            <td>Malware [TD]</td>
+                            <td>None</td>
+                        </tr>
+                        <tr>
+                            <td class="title">Week 9, 15.11.2016</td>
+                            <td>Sven Vetsch, Redguard: "Real-life Attack Simulations - A Field Report"</td>
+                            <td>Cross-Site Scripting (XSS) [TD]</td>
+                            <td>
+                                2663 Double SQL Injection<br />
+                                5104 Virus Total<br />
+                                2663 JavaScript Malware Analysis
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title">Week 10, 22.11.2016</td>
+                            <td>E4: XSS and Malware</td>
+                            <td>TLS Part 1 [AP]</td>
+                            <td>
+                                6112 OWASP A2 - XSS<br />
+                                2300 Cross-Site Scripting w/ Client-Side IV
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title">Week 11, 29.11.2016</td>
+                            <td>Michele Spagnuolo and Lukas Weichselbaum, Google: "Breaking Bad Content Security Policies"</td>
+                            <td>TLS Part 2 [AP]</td>
+                            <td>None</td>
+                        </tr>
+                        <tr>
+                            <td class="title">Week 12, 06.12.2016</td>
+                            <td>E5</td>
+                            <td>Email Spam [TD]</td>
+                            <td>
+                                3042 Exploit Heartbleed OpenSSL Vulnerability<br />
+                                7010 Linksys SSL Break
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title">Week 13, 13.12.2016</td>
+                            <td>
+                                Emilia Kasper, Google: "How to Fix TLS PKI Security?"<br />
+                                <em>This talk will not be recorded</em>
+                            </td>
+                            <td>Security Ecosystem [SF]<br />
+                                Evasion Modelling, Detection Failures, and Endpoint Security [SF]
+                            </td>
+                            <td>TBD</td>
+                        </tr>
+                        <tr>
+                            <td class="title">Week 14, 20.12.2016</td>
+                            <td>David McLaughlin, ETH Zurich: "Mail Filtering at the ETH"</td>
+                            <td>
+                                Case Study: Security Online Ticket Shop [TD]<br>
+                                Frontiers in network security research, how to prepare for the final exam, wrap-up [AP]
+                            </td>
+                            <td>TBD (some challenges to help you prepare for the exam)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+          <h5>Contact</h5>
+
+          <section class="center">
+            To contact the instructors or teaching assistants for this course, please send an email to <a href="mailto:netsec@sympa.ethz.ch">netsec@sympa.ethz.ch</a>.
+          </section>
+      </section>
+
+      <footer id="footer" class="midnight-blue" style="border-top: 5px solid #003366;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2015 <a target="_blank" href="/" title="Network Security Group ETH Zurich">Network Security Group ETH Zurich</a>
+                </div>
+                <div class="col-sm-6">
+                    <ul class="pull-right">
+                        <li><a href="/imprint.php">Imprint</a></li>
+                        <li><a href="/disclaimer.php">Disclaimer</a></li>
+                        <li><a href="/copyright.php">Copyright</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</footer>  </body>
+</html>
