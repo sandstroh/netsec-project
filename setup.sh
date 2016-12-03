@@ -8,8 +8,9 @@ then
 fi
 
 
-cp nginx/static.page /etc/nginx/site-enabled/
-nginx -s reload
+cp apache/netsec /etc/apache2/sites-enabled/netsec
+/etc/init.d/apache2 reload
+
 
 WEBSITE_DIRECTORY=/var/www/netsec/
 
