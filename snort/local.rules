@@ -1,0 +1,21 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"OS-OTHER Bash CGI environment variable injection attempt"; flow:to_server,established; content:"%3D%28%29+%7B"; fast_pattern:only; sid:31975; rev:3;)
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"OS-OTHER Bash CGI environment variable injection attempt"; flow:to_server,established; content:"() {"; fast_pattern:only; http_client_body; sid:31976; rev:3;)
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"OS-OTHER Bash CGI environment variable injection attempt"; flow:to_server,established; content:"() {"; fast_pattern:only; http_uri; sid:31977; rev:3;)
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"OS-OTHER Bash CGI environment variable injection attempt"; flow:to_server,established; content:"() {"; fast_pattern:only; http_header; sid:31978; rev:3;)
+
+
+
+#alert tcp any any -> any 4444 (msg:"SQL injection"; content:"SELECT"; nocase; http_header; content:"FROM"; nocase; http_header; within:20; sid:29234;)
+
+#alert tcp any any -> any 4444 (msg:"Shellshock1"; content:"() {"; http_header; sid:20140234;)
+#alert tcp any any -> any 4444 (msg:"Shellshock2"; content:"() {"; http_header; sid:20140234;)
+#alert tcp any any -> any 4444 (msg:"Shellshock3"; content:"shellshock"; http_header; sid:20140234;)
+
+#alert tcp any any -> any 4444 (msg:"Web server"; content:"/test.cgi"; http_uri; sid:2934)
+
+alert tcp any any -> any 4444 (msg:"GET request"; content:"GET"; http_method; sid:29324)
+
+#alert tcp any any -> any 4444 (msg:"Monitoring..."; sid:20140235;)
