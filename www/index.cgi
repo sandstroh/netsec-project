@@ -3,4 +3,4 @@
 echo "Content-type: text/html"
 echo ""
 echo ""
-cat netsec.html
+cat /var/www/netsec/netsec.html
