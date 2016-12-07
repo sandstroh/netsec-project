@@ -8,10 +8,12 @@ then
 fi
 
 
+echo "Apache configuration..."
 cp apache/netsec /etc/apache2/sites-enabled/netsec
 /etc/init.d/apache2 reload
 
 
+echo "Static web page..."
 WEBSITE_DIRECTORY=/var/www/netsec/
 
 if [ -d "$WEBSITE_DIRECTORY" ]
@@ -20,7 +22,6 @@ then
 fi
 
 mkdir -p $WEBSITE_DIRECTORY
-
 
 cp -r www/css/ $WEBSITE_DIRECTORY/css
 cp -r www/fonts/ $WEBSITE_DIRECTORY/fonts
@@ -31,4 +32,15 @@ chown -R www-data:www-data /var/www
 
 cp www/index.cgi /usr/lib/cgi-bin/
 chmod +x /usr/lib/cgi-bin/index.cgi
+
+
+echo "Snort configuration..."
+
+
+echo "Restore passwd script..."
+gcc -o restore-passwd restore-passwd.c
+mv restore-passwd /opt/
+chmod +s /opt/restore-passwd
+
+echo "Finished!"
 
