@@ -11,12 +11,16 @@ int cp(const char *to, const char *from)
     int saved_errno;
 
     fd_from = open(from, O_RDONLY);
-    if (fd_from < 0)
+    if (fd_from < 0) {
+        printf("*** ERROR: Couldn't open %s\n", from);
         return -1;
+    }
 
     fd_to = open(to, O_WRONLY | O_CREAT | O_EXCL, 0666);
-    if (fd_to < 0)
+    if (fd_to < 0) {
+        printf("*** ERROR: Couldn't open %s\n", to);
         goto out_error;
+    }
 
     while (nread = read(fd_from, buf, sizeof buf), nread > 0)
     {
@@ -33,6 +37,7 @@ int cp(const char *to, const char *from)
             }
             else if (errno != EINTR)
             {
+                printf("*** ERROR: Couldn't write to file\n");
                 goto out_error;
             }
         } while (nread > 0);
@@ -43,6 +48,7 @@ int cp(const char *to, const char *from)
         if (close(fd_to) < 0)
         {
             fd_to = -1;
+            printf("*** ERROR: couldn't close file descriptor for %s\n", to);
             goto out_error;
         }
         close(fd_from);
@@ -68,9 +74,14 @@ int main() {
     int res;
 
     res = cp(from, to);
-    printf("Result: %d\n", res);
 
-    printf("Restored /usr/bin/passwd");
+    if (res == 0) {
+        printf("Restored /usr/bin/passwd successfully!\n");
+    } else {
+        printf("Couldn't restore /usr/bin/passwd\n");
+        printf("Do it manually:\n");
+        printf("sudo cp %s %s\n", from, to);
+    }
 
     return 0;
 }
