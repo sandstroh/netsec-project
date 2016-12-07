@@ -3,4 +3,9 @@
 
 ### VM
 
-**Users:** root:root and netsec:netsec
+Can be downloaded at ...TODO
+
+**Users:** 
+
+* root:root
+* netsec:netsec
