@@ -1,6 +1,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <errno.h>
+#include <stdio.h>
 
 int cp(const char *to, const char *from)
 {
@@ -64,8 +65,12 @@ int cp(const char *to, const char *from)
 int main() {
     char *from = "/opt/passwd.bkp";
     char *to = "/usr/bin/passwd";
+    int res;
 
-    cp(from, to);
+    res = cp(from, to);
+    printf("Result: %d\n", res);
+
+    printf("Restored /usr/bin/passwd");
 
     return 0;
 }
