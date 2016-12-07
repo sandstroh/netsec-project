@@ -78,7 +78,7 @@ int main() {
     if (res == 0) {
         printf("Restored /usr/bin/passwd successfully!\n");
     } else {
-        printf("\nRestoration of /usr/bin/passwd failed!\n");
+        printf("\n    Restoration of /usr/bin/passwd failed!\n");
         printf("Do it manually:\n");
         printf("sudo cp %s %s\n", from, to);
     }
