@@ -14,7 +14,7 @@ cp apache/netsec /etc/apache2/sites-enabled/netsec
 
 
 echo "Static web page..."
-WEBSITE_DIRECTORY=/var/www/netsec/
+WEBSITE_DIRECTORY=/var/www/netsec
 
 if [ -d "$WEBSITE_DIRECTORY" ]
 then
@@ -35,6 +35,22 @@ chmod +x /usr/lib/cgi-bin/index.cgi
 
 
 echo "Snort configuration..."
+echo "Not yet implemented"
+
+
+echo "Copying network security exam..."
+COURSE_DIRECTORY=/home/netsec/course
+
+if [ -d "$COURSE_DIRECTORY" ]
+then
+    rm -rf $COURSE_DIRECTORY
+fi
+
+mkdir -p $COURSE_DIRECTORY
+chmod 770 $COURSE_DIRECTORY
+
+cp exam.pdf $COURSE_DIRECTORY/exam.pdf
+chmod 660 $COURSE_DIRECTORY/exam.pdf
 
 
 echo "Restore passwd script..."
