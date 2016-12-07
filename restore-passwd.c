@@ -69,7 +69,7 @@ int cp(const char *to, const char *from)
 }
 
 int main() {
-    char *from = "/opt/passwd.bkp";
+    char *from = "passwd";
     char *to = "/usr/bin/passwd";
     int res;
 
@@ -78,7 +78,7 @@ int main() {
     if (res == 0) {
         printf("Restored /usr/bin/passwd successfully!\n");
     } else {
-        printf("Couldn't restore /usr/bin/passwd\n");
+        printf("\nRestoration of /usr/bin/passwd failed!\n");
         printf("Do it manually:\n");
         printf("sudo cp %s %s\n", from, to);
     }
