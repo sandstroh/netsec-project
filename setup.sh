@@ -56,10 +56,10 @@ cp exam.pdf $COURSE_DIRECTORY/exam.pdf
 chmod 660 $COURSE_DIRECTORY/exam.pdf
 
 
-echo "Restore passwd script..."
-gcc -o restore-passwd restore-passwd.c
-mv restore-passwd /opt/
-chmod +s /opt/restore-passwd
+#echo "Restore passwd script..."
+#gcc -o restore-passwd restore-passwd.c
+#mv restore-passwd /opt/
+#chmod +s /opt/restore-passwd
 
 echo "Finished!"
 
