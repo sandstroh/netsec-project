@@ -35,7 +35,9 @@ chmod +x /usr/lib/cgi-bin/index.cgi
 
 
 echo "Snort configuration..."
-echo "Not yet implemented"
+cp snort/local.rules /etc/snort/rules/
+cp snort/snort.conf /etc/snort/
+chown root:root /etc/snort/snort.conf
 
 
 echo "Copying network security exam..."
