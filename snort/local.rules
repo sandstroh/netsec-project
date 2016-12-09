@@ -1,4 +1,2 @@
-alert tcp any any -> any 80 (msg:"OS-OTHER Bash CGI environment variable injection attempt 1"; flow:to_server,established; content:"%3D%28%29+%7B"; sid:31975; rev:3;)
-
-alert tcp any any -> any 80 (msg:"OS-OTHER Bash CGI environment variable injection attempt 2"; flow:to_server,established; content:"() {"; sid:31976; rev:3;)
+alert tcp any any -> any 80 (msg:"OS-OTHER Bash CGI environment variable injection attempt 2"; flow:to_server,established; content:"() {"; depth:600; sid:31976; rev:3;)
 
