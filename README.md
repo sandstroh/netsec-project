@@ -9,6 +9,8 @@ Can be downloaded here: https://drive.google.com/open?id=0B5aLHLFCodGDTFBLRkQyWl
 
 Then you can access the webserver running on the VM from your host system.
 
+To get the IP of the VM, start it, login and run the command 'ip addr show eth0'.
+
 **Users:** 
 
 * root:root
