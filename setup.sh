@@ -38,6 +38,7 @@ echo "Snort configuration..."
 cp snort/local.rules /etc/snort/rules/
 cp snort/snort.conf /etc/snort/
 chown root:root /etc/snort/snort.conf
+/etc/init.d/snort restart
 
 
 echo "Copying network security exam..."
