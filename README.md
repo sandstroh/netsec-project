@@ -24,6 +24,11 @@ To get the IP of the VM, start it, login and run the command 'ip addr show eth0'
 * sudo ./setup.sh
 
 
+**If you want to restore /usr/bin/passwd:**
+
+* sudo cp /opt/passwd.bkp /usr/bin/passwd
+
+
 ### How to Exploit
 
 Shellshock:
