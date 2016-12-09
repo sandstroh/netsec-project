@@ -23,6 +23,8 @@ To get the IP of the VM, start it, login and run the command 'ip addr show eth0'
 * git pull
 * sudo ./setup.sh
 
+**Website:** <IP-of-VM>/cgi-bin/index.cgi
+
 
 **If you want to restore /usr/bin/passwd:**
 
