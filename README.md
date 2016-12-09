@@ -3,7 +3,10 @@
 
 ### VM
 
-Can be downloaded at ...TODO
+Can be downloaded here: https://drive.google.com/open?id=0B5aLHLFCodGDTFBLRkQyWlJMNDg
+
+**Important:** Check that bridged networking is enabled (Settings > Network > Adapter 1 > Attached to: Bridged Adapter)
+Then you can access the webserver running on the VM from your host system.
 
 **Users:** 
 
