@@ -16,6 +16,13 @@ To get the IP of the VM, start it, login and run the command 'ip addr show eth0'
 * root:root
 * netsec:netsec
 
+**To Update:**
+
+* login as user 'netsec'
+* cd netsec-project
+* git pull
+* sudo ./setup.sh
+
 
 ### How to Exploit
 
