@@ -4,6 +4,7 @@
 ### VM
 
 Server VM be downloaded here: https://drive.google.com/open?id=0B5aLHLFCodGDTFBLRkQyWlJMNDg
+
 Client VM can be downloaded here: https://drive.google.com/open?id=0B55ad1nR3eibV3IxT0lSYld0VTA
 
 **Important:** Check that bridged networking is enabled (Settings > Network > Adapter 1 > Attached to: Bridged Adapter)
